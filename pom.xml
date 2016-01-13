@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.appx</groupId>
-	<artifactId>appx-parent</artifactId>
+	<groupId>com.appcrossings</groupId>
+	<artifactId>appcrossings-parent</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<name>Universal Parent Pom for AppCrossings Applications</name>
 	<developers>
@@ -13,9 +13,9 @@
 		</developer>
 	</developers>
 	<scm>
-		<url>https://bitbucket.org/appcrossings/appx-parent</url>
-		<connection>scm:git:https://bitbucket.org/appcrossings/appx-parent</connection>
-		<developerConnection>scm:git:https://bitbucket.org/appcrossings/appx-parent</developerConnection>
+		<url>https://github.com/appcrossings/appcrossings-pom</url>
+		<connection>scm:git:https://github.com/appcrossings/appcrossings-pom</connection>
+		<developerConnection>scm:git:https://github.com/appcrossings/appcrossings-pom</developerConnection>
 	</scm>
 	<licenses>
 		<license>
