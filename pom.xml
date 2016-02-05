@@ -3,13 +3,15 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.appcrossings</groupId>
 	<artifactId>appcrossings-parent</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
-	<name>Universal Parent Pom for AppCrossings Applications</name>
+	<version>1.0.0</version>
+	<name>Universal Parent Pom for Appcrossings Applications</name>
+	<description>Universal pom for all appcrossings applications</description>
+	<url>https://github.com/appcrossings/</url>
 	<developers>
 		<developer>
 			<name>Krzysztof Karski</name>
 			<email>kkarski@appcrossings.com</email>
-			<organization>AppCrossings</organization>
+			<organization>Appcrossings</organization>
 		</developer>
 	</developers>
 	<scm>
@@ -20,8 +22,7 @@
 	<licenses>
 		<license>
 			<name>Apache License, Version 2.0</name>
-			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-			<distribution>repo</distribution>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>			
 		</license>
 	</licenses>
 	<properties>
@@ -91,7 +92,7 @@
 					<plugin>
 						<groupId>org.sonatype.plugins</groupId>
 						<artifactId>nexus-staging-maven-plugin</artifactId>
-						<version>1.6.5</version>
+						<version>1.6.6</version>
 						<extensions>true</extensions>
 						<configuration>
 							<serverId>ossrh</serverId>
@@ -108,7 +109,7 @@
 				</snapshotRepository>
 				<repository>
 					<id>ossrh</id>
-					<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+					<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>					
 				</repository>
 			</distributionManagement>
 		</profile>
