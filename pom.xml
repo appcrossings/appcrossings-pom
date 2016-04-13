@@ -22,7 +22,7 @@
 	<licenses>
 		<license>
 			<name>Apache License, Version 2.0</name>
-			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>			
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
 		</license>
 	</licenses>
 	<properties>
@@ -43,6 +43,9 @@
 								<goals>
 									<goal>jar</goal>
 								</goals>
+								<configuration>
+									<additionalparam>-Xdoclint:none</additionalparam>
+								</configuration>
 							</execution>
 						</executions>
 					</plugin>
@@ -109,7 +112,7 @@
 				</snapshotRepository>
 				<repository>
 					<id>ossrh</id>
-					<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>					
+					<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
 				</repository>
 			</distributionManagement>
 		</profile>
