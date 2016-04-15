@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.appcrossings</groupId>
 	<artifactId>appcrossings-parent</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<name>Universal Parent Pom for Appcrossings Applications</name>
 	<description>Universal pom for all appcrossings applications</description>
 	<url>https://github.com/appcrossings/</url>
