@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.appcrossings</groupId>
 	<artifactId>appcrossings-parent</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.5</version>
 	<name>Universal Parent Pom for Appcrossings Applications</name>
 	<description>Universal pom for all appcrossings applications</description>
 	<url>https://github.com/appcrossings/</url>
@@ -28,6 +28,7 @@
 	<properties>
 		<build.timestamp>${maven.build.timestamp}</build.timestamp>
 		<maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss</maven.build.timestamp.format>
+		<java.version>1.8</java.version>
 	</properties>
 	<profiles>
 		<profile>
@@ -136,8 +137,8 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
 					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
@@ -174,7 +175,7 @@
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-dependencies</artifactId>
-				<version>1.3.2.RELEASE</version>
+				<version>1.4.3.RELEASE</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
