@@ -1,23 +1,15 @@
 language: java
 
-jdk: oraclejdk7
+jdk: oraclejdk8
 
-before_install:
-  - apt-get update
-  - apt-get install -y maven
-  
-branches:
-  only:
-    - master
-    
 env:
-  - secure: f+7y4+whPhSyDq4s6ty/xukg1nGBWTZaaffQu0GgpUjT2ZrH4SAko23dZDDnUxlFXcUoPHAo4bLrvxVJ3+Zfl9TtQ+TC4gP/yBR/41/zzY41YKhjVBmHeE444RRSbJTWJGBhl/OVe7T7kzBG8b32btHq9VOqIdyuKO9Erq+XTPWIYGRUJqezJSslrUyBJrg1jmWQP+cL7HtVViCU92fPPJ3T0x6/kx1ROCcM2kmD4okvoYxESvfYxqgP1Fgmb5H4A+NoiuhY8z81b7qlN7nvnJgvAQBQT7VOgs27w9seOq3zl0WVaJtIt3ASmrozBr/QPUbPo7HrX1LUtRjl8PdNkg==
+  - secure: Omi+96lGrBhUmvhAqrwheC1xovWLa4AioiVyiuoOJ/lLXsbwTRPrsV/0bLkwteK8txFepLJQZmdeLlMd1Q4SCJ+8zm8uP9FbLnj44lmKSAMb1aTcKHKwHM3jQADKmYuZ6txMh8goyrk72IlsSRXdnpsVDJme9Ix+CwL+f51678l4iL8FXSCNMco5hqJ+06HH3AaegWNPnusH/a/pOy+g3+zFlFefOoAUfSKE4JeX5QNw1PbJFO0S21bcFoXp9KjHHrlVObfxKf+pJL7t8nxQnvJ7fuKJw/F+eqXA14drtiIAR9klIcAqwdfsfGidZMPUoqGhgTtJG71IjlDoBQYb2w==
 
-script:
-  - mvn clean install -Daws.accessKeyId=$aws.accessKeyId -Daws.secretKey=$aws.secretKey
+ci:
+  - mvn clean install -Daws.accessKeyId=$awsAccessKeyId -Daws.secretKey=$awsSecretKey
 
-after_success:
-  - mvn deploy -Dmaven.install.skip=true -Daws.accessKeyId=AKIAIENSRCCLALIZBRUA -Daws.secretKey=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
+on_success:
+  - mvn deploy -Dmaven.install.skip=true -Daws.accessKeyId=$awsAccessKeyId -Daws.secretKey=$awsSecretKey
   
 notifications:
    email: false
