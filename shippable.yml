@@ -1,20 +1,15 @@
 language: java
 
-jdk: oraclejdk7
+jdk: oraclejdk8
 
-before_install:
-  - apt-get update
-  - apt-get install -y maven
-  
-branches:
-  only:
-    - master
+env:
+  - secure: Omi+96lGrBhUmvhAqrwheC1xovWLa4AioiVyiuoOJ/lLXsbwTRPrsV/0bLkwteK8txFepLJQZmdeLlMd1Q4SCJ+8zm8uP9FbLnj44lmKSAMb1aTcKHKwHM3jQADKmYuZ6txMh8goyrk72IlsSRXdnpsVDJme9Ix+CwL+f51678l4iL8FXSCNMco5hqJ+06HH3AaegWNPnusH/a/pOy+g3+zFlFefOoAUfSKE4JeX5QNw1PbJFO0S21bcFoXp9KjHHrlVObfxKf+pJL7t8nxQnvJ7fuKJw/F+eqXA14drtiIAR9klIcAqwdfsfGidZMPUoqGhgTtJG71IjlDoBQYb2w==
 
-script:
-  - mvn clean install -Daws.accessKeyId=AKIAIENSRCCLALIZBRUA -Daws.secretKey=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
+ci:
+  - mvn clean install -Daws.accessKeyId=$awsAccessKeyId -Daws.secretKey=$awsSecretKey
 
-after_success:
-  - mvn deploy -Dmaven.install.skip=true -Daws.accessKeyId=AKIAIENSRCCLALIZBRUA -Daws.secretKey=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
+on_success:
+  - mvn deploy -Dmaven.install.skip=true -Daws.accessKeyId=$awsAccessKeyId -Daws.secretKey=$awsSecretKey
   
 notifications:
    email: false

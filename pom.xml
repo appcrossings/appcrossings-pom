@@ -3,7 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.appcrossings</groupId>
 	<artifactId>appcrossings-parent</artifactId>
+<<<<<<< HEAD
 	<version>1.0.4</version>
+=======
+	<version>1.0.6</version>
+>>>>>>> 3967f575cdc3c2c09fcbab221c2210c0d028e2f9
 	<name>Universal Parent Pom for Appcrossings Applications</name>
 	<description>Universal pom for all appcrossings applications</description>
 	<url>https://github.com/appcrossings/</url>
@@ -119,13 +123,6 @@
 		</profile>
 	</profiles>
 	<build>
-		<extensions>
-			<extension>
-				<groupId>org.springframework.build</groupId>
-				<artifactId>aws-maven</artifactId>
-				<version>5.0.0.RELEASE</version>
-			</extension>
-		</extensions>
 		<resources>
 			<resource>
 				<directory>src/main/resources</directory>
@@ -136,6 +133,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.6.1</version>
 				<configuration>
 					<source>${java.version}</source>
 					<target>${java.version}</target>
@@ -145,6 +143,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.19.1</version>
 				<configuration>
 					<includes>
 						<include>**/Test*.java</include>
@@ -154,6 +153,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-failsafe-plugin</artifactId>
+				<version>2.19.1</version>
 				<executions>
 					<execution>
 						<goals>
@@ -186,41 +186,45 @@
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-dependencies</artifactId>
+<<<<<<< HEAD
 				<version>1.4.0.RELEASE</version>
+=======
+				<version>1.5.1.RELEASE</version>
+>>>>>>> 3967f575cdc3c2c09fcbab221c2210c0d028e2f9
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
 	<distributionManagement>
-		<repository>
-			<id>aws-release</id>
-			<name>AWS Release Repository</name>
-			<url>s3://maven.appcrossings.net/release</url>
-		</repository>
-		<snapshotRepository>
-			<id>aws-snapshot</id>
-			<name>AWS Snapshot Repository</name>
-			<url>s3://maven.appcrossings.net/snapshot</url>
-		</snapshotRepository>
-	</distributionManagement>
-	<repositories>
-		<repository>
-			<id>aws-release</id>
-			<name>AWS Release Repository</name>
-			<url>s3://maven.appcrossings.net/release</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-		</repository>
-		<repository>
-			<id>aws-snapshot</id>
-			<name>AWS Snapshot Repository</name>
-			<url>s3://maven.appcrossings.net/snapshot</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
+    <repository>
+      <id>tickerstorm-releases</id>
+      <name>tickerstorm-releases</name>
+      <url>https://tickerstorm.jfrog.io/tickerstorm/release</url>
+    </repository>
+    <snapshotRepository>
+      <id>tickerstorm-snapshots</id>
+      <name>tickerstorm-snapshots</name>
+      <url>https://tickerstorm.jfrog.io/tickerstorm/snapshot</url>
+    </snapshotRepository>
+  </distributionManagement>
+  <repositories>
+    <repository>
+      <id>tickerstorm-releases</id>
+      <name>TickerStorm Releases</name>
+      <url>https://tickerstorm.jfrog.io/tickerstorm/release</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+    </repository>
+    <repository>
+      <id>tickerstorm-snapshots</id>
+      <name>TickerStorm Releases</name>
+      <url>https://tickerstorm.jfrog.io/tickerstorm/snapshot</url>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
 	<packaging>pom</packaging>
 </project>
