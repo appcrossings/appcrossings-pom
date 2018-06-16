@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.appcrossings</groupId>
 	<artifactId>appcrossings-parent</artifactId>
-	<version>1.0.7</version>
+	<version>1.0.8</version>
 	<name>Universal Parent Pom for Appcrossings Applications</name>
 	<description>Universal pom for all appcrossings applications</description>
 	<url>https://github.com/appcrossings/</url>
@@ -180,9 +180,9 @@
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-dependencies</artifactId>
-				<version>1.5.9.RELEASE</version>
+				<groupId>io.spring.platform</groupId>
+				<artifactId>platform-bom</artifactId>
+				<version>Brussels-SR10</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
